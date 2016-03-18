@@ -1,0 +1,9 @@
+[Dolphin]
+HeaderColumnWidths=324,95,130,243
+Timestamp=2016,3,18,13,43,19
+Version=3
+ViewMode=1
+VisibleRoles=Details_text,Details_size,Details_date,Details_type,CustomizedDetails
+
+[Settings]
+HiddenFilesShown=true

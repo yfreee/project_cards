@@ -1,0 +1,33 @@
+<template name="MasterLayout">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navigationbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>{{#linkTo route="userLogin"}}Login{{/linkTo}}</li>
+          <li>{{#linkTo route="userSignup"}}Signup{{/linkTo}}</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container" style="margin:50px">
+    {{> yield}}
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-left">
+        <li>{{#linkTo route="home"}}Home{{/linkTo}}</li>
+        <li>{{#linkTo route="tasklist"}}List{{/linkTo}}</li>
+        <li>{{#linkTo route="taskitem"}}Task{{/linkTo}}</li>
+        <li style="padding-top: 15px;padding-bottom: 15px;">Project Control v1.0.0</li>
+      </ul>
+    </div>
+  </nav>  
+</template>

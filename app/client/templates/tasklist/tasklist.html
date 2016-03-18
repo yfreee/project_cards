@@ -1,0 +1,28 @@
+<template name="Tasklist" class="container-fluid">
+  <div class="tasklist-addform row text-right">
+    {{#autoForm collection="Tasklist" id="insertTaskListForm" type="insert"}}
+      <div class="form-group" data-required="true">
+        <ul class="list-inline list-unstyled">
+          <li>New</li>
+          <li>
+            {{> afQuickField name='title' template='bootstrap3-horizontal'}}
+          </li>
+          <li><button type="submit" class="btn">+</button></li>
+        </ul>        
+      </div>
+    {{/autoForm}}
+  </div>
+  <div class="row">  
+    {{#each tasklist}}
+    <div class="col-xs-6 col-md-3">
+        <div class="tasklist">
+            <h5 class="text-center">{{title}}</h5>
+            <hr/>
+            <ul class="list-unstyled">
+                <li><span class="text-right"><a class="btn" href="#">Add Task</a></span></li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
